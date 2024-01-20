@@ -10,20 +10,24 @@
     transform-origin: top;
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       height: 100%;
       width: 100%;
       position: absolute;
       top: 0;
       left: 0;
-      background-image: linear-gradient(
-        to right bottom,
-        $color-grad-1,
-        $color-grad-2
-      );
-      opacity: 0.6;
+      // background-image: linear-gradient(
+      //   to right bottom,
+      //   $color-secondary,
+      //   $color-tertiary
+      // );
+      opacity: 0.3;
     }
+  }
+
+  &__btn {
+    background: $color-primary;
   }
 
   &__img {
@@ -31,16 +35,17 @@
     display: block;
     height: 100%;
     object-fit: cover;
+    filter: blur(2px);
   }
 
   &__title {
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, 20%) skewY(-6deg);
+    transform: translate(-50%, 20%);
     color: #fff;
     font-weight: 700;
-    font-size: 3.25rem;
+    font-size: 3.5rem;
     text-transform: uppercase;
     width: 50%;
     line-height: 1.95;
@@ -52,9 +57,14 @@
       padding: 1.3rem 2rem;
       background-image: linear-gradient(
         to right bottom,
-        $color-grad-1,
-        $color-grad-2
+        $color-primary,
+        $color-primary
       );
+      // background-image: linear-gradient(
+      //   to right bottom,
+      //   $color-secondary,
+      //   $color-tertiary
+      // );
     }
 
     @media only screen and (max-width: $bp-medium) {
@@ -82,8 +92,8 @@
   }
 
   &__info-icon {
-    height: 2.35rem;
-    width: 2.35rem;
+    height: 3rem;
+    width: 3rem;
     fill: $color-primary;
     margin-right: 1.15rem;
   }
@@ -100,22 +110,27 @@
   }
 
   &__user-generated {
-    background-color: darken($color-grey-light-2, 2%);
+    background-color: $color-primary;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 4rem;
-    width: 4rem;
-    border-radius: 10rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 2px;
+
+    transition: all 0.2s;
 
     margin-left: auto;
     margin-right: 1.75rem;
 
+    &:hover {
+      transform: scale(1.07);
+    }
     svg {
       height: 2.25rem;
       width: 2.25rem;
-      fill: $color-primary;
+      fill: #fff;
     }
   }
 
@@ -143,8 +158,8 @@
   }
 
   &__icon {
-    height: 2rem;
-    width: 2rem;
+    height: 3rem;
+    width: 3rem;
     fill: $color-primary;
     margin-right: 1.1rem;
     flex: 0 0 auto;

@@ -1,7 +1,7 @@
 // $color-primary: #f59a83;
-$color-primary: #f38e82;
-$color-grad-1: #fbdb89;
-$color-grad-2: #f48982;
+$color-primary: #cedea0;
+$color-secondary: #f7ffe5;
+$color-tertiary: #9fb885;
 
 $color-grey-light-1: #f9f5f3; // Light background
 $color-grey-light-2: #f2efee; // Light lines
@@ -9,12 +9,20 @@ $color-grey-light-3: #d3c7c3; // Light text (placeholder)
 $color-grey-dark-1: #615551; // Normal text
 $color-grey-dark-2: #918581; // Lighter text
 
-$gradient: linear-gradient(to right bottom, $color-grad-1, $color-grad-2);
+// $gradient: linear-gradient(to right bottom, $color-secondary, $color-tertiary);
 
-$bp-large: 78.15em; // 1250px
-$bp-medium: 61.25em; // 980px
-$bp-small: 37.5em; // 600px
-$bp-smallest: 31.25em; // 500px
+$bp-large: 1250px;
+$bp-medium: 980px;
+$bp-small: 600px;
+$bp-smallest: 500px;
+
+$fs-xxs: 6px;
+$fs-xs: 10px;
+$fs-s: 14px;
+$fs-m: 18px;
+$fs-l: 24px;
+$fs-xl: 32px;
+$fs-xxl: 72px;
 
 * {
   margin: 0;
@@ -37,22 +45,23 @@ html {
 }
 
 body {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 1.6;
   color: $color-grey-dark-1;
-  background-image: $gradient;
+  background: $color-grey-dark-1;
+  // background-image: $gradient;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: calc(100vh - 2 * 4vw);
 }
 
 .container {
-  max-width: 120rem;
-  min-height: 117rem;
-  margin: 4vw auto;
+  max-width: 100%;
+  margin: 0;
+  border-radius: 0;
   background-color: #fff;
-  border-radius: 9px;
+  border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 2rem 6rem 0.5rem rgba($color-grey-dark-1, 0.2);
 
@@ -60,12 +69,18 @@ body {
   grid-template-rows: 10rem minmax(100rem, auto);
   grid-template-columns: 1fr 2fr;
   grid-template-areas:
-    'head head'
-    'list recipe';
+    "head head"
+    "list recipe";
+}
 
-  @media only screen and (max-width: $bp-large) {
-    max-width: 100%;
-    margin: 0;
-    border-radius: 0;
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

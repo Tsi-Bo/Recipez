@@ -1,0 +1,90 @@
+.links-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%; /* Set the width of your overlay */
+  height: 70%; /* Set the height of your overlay */
+  background-color: white;
+  border-radius: 4px;
+  z-index: 200;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 100px;
+
+  &--btn {
+    position: absolute;
+    font-size: $fs-xl;
+    margin: 30px;
+    top: 0;
+    right: 0;
+    border: none;
+    background: none;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      transform: rotate(45deg) scale(1.2);
+    }
+  }
+
+  &--links {
+    z-index: 201;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &--explanation {
+    text-align: justify;
+    p {
+      max-width: 500px;
+    }
+  }
+}
+
+.links__row {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: $fs-l;
+  width: 100%;
+  gap: 30px;
+
+  svg {
+    height: 50px;
+    min-height: 50px;
+    width: 50px;
+    min-width: 50px;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+
+  a:hover {
+    color: $color-primary;
+    transform: translateX(5px);
+  }
+}
+
+@media (max-width: $bp-medium) {
+  .links-window {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+  }
+  .links-window--explanation p {
+    font-size: $fs-s;
+  }
+}

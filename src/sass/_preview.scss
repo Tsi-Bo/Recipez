@@ -8,13 +8,17 @@
       transition: all 0.3s;
       border-right: 1px solid #fff;
       text-decoration: none;
+      transition: all 0.3s;
     }
 
     &:hover {
       background-color: $color-grey-light-1;
-      transform: translateY(-2px);
+      .preview__title {
+        transform: translateX(5px);
+        transition: all 0.15s;
+      }
+      // transform: translateY(-2px);
     }
-
     &--active {
       background-color: $color-grey-light-1;
     }
@@ -30,18 +34,18 @@
     backface-visibility: hidden;
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       height: 100%;
       width: 100%;
       position: absolute;
       top: 0;
       left: 0;
-      background-image: linear-gradient(
-        to right bottom,
-        $color-grad-1,
-        $color-grad-2
-      );
+      // background-image: linear-gradient(
+      //   to right bottom,
+      //   $color-secondary,
+      //   $color-tertiary
+      // );
       opacity: 0.4;
     }
 
@@ -101,5 +105,12 @@
       width: 1.2rem;
       fill: $color-primary;
     }
+  }
+}
+
+@media (max-width: $bp-small) {
+  .preview__title,
+  .preview__publisher {
+    display: none;
   }
 }

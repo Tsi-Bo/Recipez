@@ -14,15 +14,15 @@
 
 .search {
   background-color: #fff;
-  border-radius: 10rem;
+  border-radius: 2px;
   display: flex;
   align-items: center;
   padding-left: 3rem;
-  transition: all 0.3s;
+  transition: all 0.15s;
 
   &:focus-within {
     transform: translateY(-2px);
-    box-shadow: 0 0.7rem 3rem rgba($color-grey-dark-1, 0.08);
+    // box-shadow: 0 0.7rem 3rem rgba($color-grey-dark-1, 0.08);
   }
 
   &__field {
@@ -53,6 +53,7 @@
   &__btn {
     font-weight: 600;
     font-family: inherit;
+    background: $color-primary;
   }
 }
 
@@ -70,6 +71,12 @@
     position: relative;
   }
 
+  &__icon--links {
+    transition: 0.3s ease-out;
+  }
+  &__icon--links:hover {
+    transform: rotate(45deg) scale(1.1);
+  }
   &__btn {
     height: 100%;
     font-family: inherit;
@@ -113,6 +120,7 @@
   width: 40rem;
   background-color: #fff;
   box-shadow: 0 0.8rem 5rem 2rem rgba($color-grey-dark-1, 0.1);
+  border-radius: 4px;
 
   visibility: hidden;
   opacity: 0;
