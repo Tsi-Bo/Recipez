@@ -1,9 +1,9 @@
 # Recipez
-## _Search your favorite recipe_
+## _Search your favourite recipes_
 
 - Search for an ingredient or a specific recipe.
 - Specify the amount of servings. 
-- Bookmark your favorite recipes and store them after closing the browser.
+- Bookmark your favourite recipes and store them after closing the browser.
 - Create and upload your own recipes.
 
 
