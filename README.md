@@ -35,7 +35,7 @@ Before any coding is, it's important to place oneself in the mind of the user. T
 
 Here is a descriptive [flowchart] of the app.
 
-If you have any questions or want to reach me, here is my [linkedin].
+If you have any questions or want to reach me, here is my [linkedin]. 
 
 ## _Thanks and acknowledgments_
 
